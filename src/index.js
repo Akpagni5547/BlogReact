@@ -11,8 +11,8 @@ import { reduxFirestore, getFirestore} from 'redux-firestore'
 import { reactReduxFirebase, getFirebase} from 'react-redux-firebase'
 import fbConfig from './config/fbConfig'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {  ThemeProvider } from '@material-ui/core/styles';
-import theme from './theme'
+//import {  ThemeProvider } from '@material-ui/core/styles';
+//import theme from './theme'
 
 
 const store = createStore(rootReducer,
@@ -25,11 +25,9 @@ const store = createStore(rootReducer,
   store.firebaseAuthIsReady.then(() => {
     ReactDOM.render(
       <React.StrictMode>
-        <ThemeProvider theme={theme}>
         <Provider store={store}>
         <App />
         </Provider>
-        </ThemeProvider>
       </React.StrictMode>,
       document.getElementById('root')
     );

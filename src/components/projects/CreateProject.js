@@ -4,25 +4,12 @@ import {createProject} from '../../store/actions/projectActions'
 import {Redirect} from 'react-router-dom'
 import Navbar from '../layout/Navbar'
 import TextEditor from './textEditor'
-import { Editor } from "react-draft-wysiwyg";
-import { EditorState, convertToRaw } from "draft-js";
-
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import draftToHtml from "draftjs-to-html";
 
  class CreateProject extends Component {
      state = {
         title: '',
         content: ''
      }
-     statess = {
-        editorState: EditorState.createEmpty(),
-      };
-      onEditorStateChange = (editorState) => {
-        this.setState({
-          editorState,
-        });
-      };
      handleChange = (e) =>{
          this.setState({
              [e.target.id] : e.target.value
@@ -35,7 +22,6 @@ import draftToHtml from "draftjs-to-html";
         this.props.history.push('/')
     }
     render() {
-        const { editorState } = this.statess;
         const {auth} = this.props;
         if(!auth.uid) return <Redirect to='/signin'/>
         return (
@@ -53,16 +39,7 @@ import draftToHtml from "draftjs-to-html";
                         <textarea id="content" className="materialize-textarea" onChange={this.handleChange}></textarea>
                     </div>
                     <div>
-                        <label htmlFor="content">Article à rédiger</label>
-        <Editor
-          editorState={editorState}
-          toolbarClassName="toolbarClassName"
-          wrapperClassName="wrapperClassName"
-          editorClassName="editorClassName"
-          onEditorStateChange={this.onEditorStateChange}
-        />
-        <textarea id="content" className="materialize-textarea" onChange={this.handleChange} ></textarea>
-      </div>
+            </div>
                     <TextEditor/>
                     <div className="input-field">
                         <button className="btn pink lighten-1 z-depth-0" onSubmit={this.handleSubmit}>Ajouter</button>

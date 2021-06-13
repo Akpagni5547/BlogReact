@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link/*, NavLink */ } from 'react-router-dom'
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import {SidebarData} from './SlidebarData'
@@ -9,6 +9,7 @@ import './Navbarperso.css'
 //import SignedInLinks from '../layout/SignedInLinks'
 //import SignedOutLinks from '../layout/SignedOutLinks'
 import {IconContext} from 'react-icons'
+import Navbar from '../layout/Navbar'
 //import * as ReactBootStrap from 'react-bootstrap'
 
 function Navbarperso() {
@@ -17,6 +18,7 @@ function Navbarperso() {
   const showSidebar = () => setSidebar (!sidebar)
     return (
         <>
+        <Navbar/>
         <IconContext.Provider value={ {color: 'white'}}>
         <div className='navbar'>
         <Link to="#" className='menu-bars'>
@@ -24,10 +26,7 @@ function Navbarperso() {
             
           </Link>
           
-          <ul className="right">
-          <li><NavLink to='/create'>Nouvel article</NavLink></li>
-          <li><NavLink to='/create'>decoo</NavLink></li>
-          </ul>
+         
         </div>
         
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu' }>
