@@ -19,8 +19,8 @@ function Navbarperso() {
     return (
         <>
         <Navbar/>
-        <IconContext.Provider value={ {color: 'white'}}>
-        <div className='navbar'>
+        <IconContext.Provider value={ {color: 'orange'}}>
+        <div className='navbars'>
         <Link to="#" className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar}/> 
             

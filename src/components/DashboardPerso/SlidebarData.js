@@ -5,16 +5,16 @@ import * as IoIcons from 'react-icons/io';
 
  export const SidebarData = [
     {
-        title: "Ecrire_un_article",
-        path:'/',
+        title: "Nouvel article",
+        path:'/NouveauArticle',
         icon: <AiIcons.AiFillHome/>,
         cName: 'nav-text'
     },
     {
-        title: "Liste_des_articles",
-        path:'/reports',
+        title: "Liste articles",
+        path:'/ListeArticles',
         icon: <IoIcons.IoIosPaper/>,
         cName: 'nav-text'
-    },
+    }
    
 ]

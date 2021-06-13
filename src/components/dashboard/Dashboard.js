@@ -11,8 +11,10 @@ import CarouselContainer from '../carroussel/caroussel'
 
 class Dashboard extends Component {
     render(){
-        //console.log(this.props)
+        console.log("helooooss")
+        console.log(this.props)
         const { projects, auth } = this.props;
+        console.log(auth)
         if(!auth.uid) return <Redirect to='/signin'/>
         const choixNavbar = auth.uid ? <Navbarperso />: <Navbar />
         return(
@@ -34,7 +36,7 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps = (state) =>{
-    console.log(state)
+   // console.log(state)
     return {
     projects: state.firestore.ordered.projects,
     auth: state.firebase.auth

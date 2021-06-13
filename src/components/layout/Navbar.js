@@ -17,7 +17,7 @@ const Navbar = (props) => {
 
             </div>
         </nav>*/
-        <ReactBootStrap.Navbar collapseOnSelect expand="lg" bg="purple" variant="dark">
+        <ReactBootStrap.Navbar collapseOnSelect expand="lg" bg="warning" variant="dark">
   <ReactBootStrap.Nav.Link to='/' className="brand-logo">Helios</ReactBootStrap.Nav.Link>
   <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">

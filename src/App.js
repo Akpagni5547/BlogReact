@@ -5,6 +5,8 @@ import ProjectDetails from './components/projects/ProjectDetail'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import CreateProject from './components/projects/CreateProject'
+import ListeArticles from './pages/ListeArticles'
+import NouveauArticle from './pages/NouveauArticle'
 //import CarouselContainer from './components/carroussel/caroussel'
 
 //import Navbar from './components/layout/Navbar'
@@ -21,9 +23,13 @@ class App extends Component {
       
       <BrowserRouter>
       <div className="App">
+        
       
         <Switch>
+
           <Route exact path='/' component={Dashboard}/>
+          <Route path='/NouveauArticle' component={NouveauArticle}/>
+          <Route path='/ListeArticles' component={ListeArticles}/>
           <Route path='/project/:id' component={ProjectDetails }/>
           <Route path='/signin' component={SignIn}/>
           <Route path='/signup' component={SignUp}/>
