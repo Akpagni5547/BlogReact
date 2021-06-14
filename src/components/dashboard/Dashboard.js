@@ -15,7 +15,7 @@ class Dashboard extends Component {
         console.log(this.props)
         const { projects, auth } = this.props;
         console.log(auth)
-        if(!auth.uid) return <Redirect to='/signin'/>
+        
         const choixNavbar = auth.uid ? <Navbarperso />: <Navbar />
         return(
             <>
